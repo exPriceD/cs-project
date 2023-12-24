@@ -58,10 +58,10 @@ function displayItems(items) {
         // Создаем изображение товара
         const productImg = document.createElement("img");
         productImg.src = product.image;
-        productImg.alt = "pink_gamepad";
         let route = product.image.split("/");
         let class_name = ((route.at(-1)).split(".")).at(0);
         productImg.classList.add(`${class_name}`);
+        productImg.alt = `${class_name}`;
 
         // Создаем ссылку на товар
         const productName = processingProductName(product.name);
